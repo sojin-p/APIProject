@@ -22,10 +22,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="167" height="209"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="muA-5X-D2K">
-                                <rect key="frame" x="5" y="5" width="157" height="167.33333333333334"/>
+                                <rect key="frame" x="5" y="5" width="157" height="146.33333333333334"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BGb-sd-w8s">
-                                <rect key="frame" x="5" y="180.33333333333334" width="157" height="23.666666666666657"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BGb-sd-w8s">
+                                <rect key="frame" x="5" y="159.33333333333334" width="157" height="44.666666666666657"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -35,10 +35,10 @@
                         <constraints>
                             <constraint firstItem="muA-5X-D2K" firstAttribute="leading" secondItem="EUf-Fa-Xp5" secondAttribute="leading" constant="5" id="0qT-kT-CTN"/>
                             <constraint firstAttribute="trailing" secondItem="muA-5X-D2K" secondAttribute="trailing" constant="5" id="5W6-7D-qiK"/>
-                            <constraint firstItem="muA-5X-D2K" firstAttribute="height" secondItem="EUf-Fa-Xp5" secondAttribute="height" multiplier="0.8" id="6ig-aA-FKI"/>
+                            <constraint firstItem="muA-5X-D2K" firstAttribute="height" secondItem="EUf-Fa-Xp5" secondAttribute="height" multiplier="0.7" id="6ig-aA-FKI"/>
                             <constraint firstItem="BGb-sd-w8s" firstAttribute="trailing" secondItem="muA-5X-D2K" secondAttribute="trailing" id="ag8-5n-KkU"/>
                             <constraint firstItem="BGb-sd-w8s" firstAttribute="leading" secondItem="muA-5X-D2K" secondAttribute="leading" id="hwK-nn-3Te"/>
-                            <constraint firstAttribute="bottom" secondItem="BGb-sd-w8s" secondAttribute="bottom" constant="5" id="qyd-le-6H9"/>
+                            <constraint firstAttribute="bottom" relation="lessThanOrEqual" secondItem="BGb-sd-w8s" secondAttribute="bottom" constant="5" id="qyd-le-6H9"/>
                             <constraint firstItem="BGb-sd-w8s" firstAttribute="top" secondItem="muA-5X-D2K" secondAttribute="bottom" constant="8" id="riE-1o-6CR"/>
                             <constraint firstItem="muA-5X-D2K" firstAttribute="top" secondItem="EUf-Fa-Xp5" secondAttribute="top" constant="5" id="zWF-vL-5y5"/>
                         </constraints>

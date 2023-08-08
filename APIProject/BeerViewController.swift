@@ -6,10 +6,13 @@
 //
 
 import UIKit
+import Alamofire
+import SwiftyJSON
 
 class BeerViewController: UIViewController {
 
     @IBOutlet var beerCollectionView: UICollectionView!
+    var beerList: [String] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,7 +24,32 @@ class BeerViewController: UIViewController {
         beerCollectionView.register(nib, forCellWithReuseIdentifier: "BeerCollectionViewCell")
         
         setCollectionViewLayout()
+        callRequest()
         
+    }
+    
+    func callRequest() {
+        let url = "https://api.punkapi.com/v2/beers"
+        AF.request(url, method: .get).validate().responseJSON { response in
+            switch response.result {
+            case .success(let value):
+                let json = JSON(value)
+                print("JSON: \(json)")
+                
+                let beerName = json[0]["name"].stringValue
+                let beerName2 = json[1]["name"].stringValue
+                let beerName3 = json[2]["name"].stringValue
+                
+                self.beerList.append(contentsOf: [beerName, beerName2, beerName3])
+                
+                print(beerName,beerName2,beerName3,"되나요")
+                
+                self.beerCollectionView.reloadData()
+                
+            case .failure(let error):
+                print(error)
+            }
+        }
     }
 
 
@@ -30,7 +58,7 @@ class BeerViewController: UIViewController {
 extension BeerViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        20
+        return beerList.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -39,7 +67,7 @@ extension BeerViewController: UICollectionViewDelegate, UICollectionViewDataSour
         }
         
         cell.beerImage.backgroundColor = .cyan
-        cell.beerTitle.text = "테스트"
+        cell.beerTitle.text = beerList[indexPath.item]
         cell.beerTitle.backgroundColor = .yellow
         
         return cell
