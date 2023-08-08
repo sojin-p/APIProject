@@ -8,14 +8,22 @@
 import UIKit
 import Alamofire
 import SwiftyJSON
+import Kingfisher
+
+struct Beer {
+    var title: String
+    var imageURL: String
+}
 
 class BeerViewController: UIViewController {
 
     @IBOutlet var beerCollectionView: UICollectionView!
-    var beerList: [String] = []
+    var beerList: [Beer] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        title = "맥주"
         
         beerCollectionView.delegate = self
         beerCollectionView.dataSource = self
@@ -30,19 +38,22 @@ class BeerViewController: UIViewController {
     
     func callRequest() {
         let url = "https://api.punkapi.com/v2/beers"
+        
         AF.request(url, method: .get).validate().responseJSON { response in
             switch response.result {
             case .success(let value):
                 let json = JSON(value)
                 print("JSON: \(json)")
                 
-                let beerName = json[0]["name"].stringValue
-                let beerName2 = json[1]["name"].stringValue
-                let beerName3 = json[2]["name"].stringValue
-                
-                self.beerList.append(contentsOf: [beerName, beerName2, beerName3])
-                
-                print(beerName,beerName2,beerName3,"되나요")
+                for i in json.arrayValue {
+                    let beerName = i["name"].stringValue
+                    let beerImage = i["image_url"].stringValue
+                    if beerImage.contains("\\") {
+                        let removeSlash = "\\".addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)
+                    }
+                    let data = Beer(title: beerName, imageURL: beerImage)
+                    self.beerList.append(data)
+                }
                 
                 self.beerCollectionView.reloadData()
                 
@@ -66,9 +77,12 @@ extension BeerViewController: UICollectionViewDelegate, UICollectionViewDataSour
             return UICollectionViewCell()
         }
         
-        cell.beerImage.backgroundColor = .cyan
-        cell.beerTitle.text = beerList[indexPath.item]
-        cell.beerTitle.backgroundColor = .yellow
+        let imageURL = URL(string: beerList[indexPath.item].imageURL)
+        
+        cell.beerImage.kf.setImage(with: imageURL)
+        cell.beerTitle.text = beerList[indexPath.item].title
+        cell.beerTitle.textAlignment = .center
+        cell.beerTitle.font = .boldSystemFont(ofSize: 13)
         
         return cell
     }
@@ -80,7 +94,7 @@ extension BeerViewController: UICollectionViewDelegate, UICollectionViewDataSour
         let spacing: CGFloat = 8
         let width = UIScreen.main.bounds.width - (spacing * 4)
 
-        layout.itemSize = CGSize(width: width / 3, height: width / 1.7)
+        layout.itemSize = CGSize(width: width / 3, height: width / 1.4)
         layout.sectionInset = UIEdgeInsets(top: spacing, left: spacing, bottom: spacing, right: spacing)
         
         layout.minimumLineSpacing = spacing
