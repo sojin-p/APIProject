@@ -18,6 +18,7 @@
 		232408972A823EE5000A1024 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 232408962A823EE5000A1024 /* Alamofire */; };
 		2324089A2A823EF3000A1024 /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = 232408992A823EF3000A1024 /* SwiftyJSON */; };
 		2324089D2A824530000A1024 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 2324089C2A824530000A1024 /* Kingfisher */; };
+		232408A32A825528000A1024 /* RandomBeerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 232408A22A825527000A1024 /* RandomBeerViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,7 @@
 		2324088B2A8230EE000A1024 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		232408912A823A8C000A1024 /* BeerCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerCollectionViewCell.swift; sourceTree = "<group>"; };
 		232408922A823A8C000A1024 /* BeerCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BeerCollectionViewCell.xib; sourceTree = "<group>"; };
+		232408A22A825527000A1024 /* RandomBeerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomBeerViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +74,7 @@
 				232408912A823A8C000A1024 /* BeerCollectionViewCell.swift */,
 				232408922A823A8C000A1024 /* BeerCollectionViewCell.xib */,
 				232408832A8230EA000A1024 /* Main.storyboard */,
+				232408A22A825527000A1024 /* RandomBeerViewController.swift */,
 				232408862A8230EE000A1024 /* Assets.xcassets */,
 				232408882A8230EE000A1024 /* LaunchScreen.storyboard */,
 				2324088B2A8230EE000A1024 /* Info.plist */,
@@ -162,6 +165,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				232408932A823A8C000A1024 /* BeerCollectionViewCell.swift in Sources */,
+				232408A32A825528000A1024 /* RandomBeerViewController.swift in Sources */,
 				232408822A8230EA000A1024 /* BeerViewController.swift in Sources */,
 				2324087E2A8230EA000A1024 /* AppDelegate.swift in Sources */,
 				232408802A8230EA000A1024 /* SceneDelegate.swift in Sources */,

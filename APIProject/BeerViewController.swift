@@ -43,7 +43,7 @@ class BeerViewController: UIViewController {
             switch response.result {
             case .success(let value):
                 let json = JSON(value)
-                print("JSON: \(json)")
+//                print("JSON: \(json)")
                 
                 for i in json.arrayValue {
                     let beerName = i["name"].stringValue
@@ -81,7 +81,6 @@ extension BeerViewController: UICollectionViewDelegate, UICollectionViewDataSour
         
         cell.beerImage.kf.setImage(with: imageURL)
         cell.beerTitle.text = beerList[indexPath.item].title
-        cell.beerTitle.textAlignment = .center
         cell.beerTitle.font = .boldSystemFont(ofSize: 13)
         
         return cell
