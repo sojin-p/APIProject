@@ -48,9 +48,9 @@ class BeerViewController: UIViewController {
                 for i in json.arrayValue {
                     let beerName = i["name"].stringValue
                     let beerImage = i["image_url"].stringValue
-                    if beerImage.contains("\\") {
-                        let removeSlash = "\\".addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)
-                    }
+//                    if beerImage.contains("\\") {
+//                        let removeSlash = "\\".addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)
+//                    }
                     let data = Beer(title: beerName, imageURL: beerImage)
                     self.beerList.append(data)
                 }

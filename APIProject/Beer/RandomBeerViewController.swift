@@ -53,11 +53,11 @@ class RandomBeerViewController: UIViewController {
                 let beerName = json[0]["name"].stringValue
                 let image = json[0]["image_url"].stringValue
                 let description = json[0]["description"].stringValue
-                
-                if image.contains("\\") {
-                    let removeSlash = "\\".addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)
-                }
-                
+//                
+//                if image.contains("\\") {
+//                    let removeSlash = "\\".addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)
+//                }
+//                
                 self.beerName.text = beerName
                 self.beerName.font = .boldSystemFont(ofSize: 17)
                 self.beerName.numberOfLines = 0

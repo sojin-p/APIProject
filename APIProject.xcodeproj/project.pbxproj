@@ -19,6 +19,9 @@
 		2324089A2A823EF3000A1024 /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = 232408992A823EF3000A1024 /* SwiftyJSON */; };
 		2324089D2A824530000A1024 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 2324089C2A824530000A1024 /* Kingfisher */; };
 		232408A32A825528000A1024 /* RandomBeerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 232408A22A825527000A1024 /* RandomBeerViewController.swift */; };
+		232408C52A84E402000A1024 /* Translation.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 232408C42A84E402000A1024 /* Translation.storyboard */; };
+		232408C72A84E41F000A1024 /* TranslationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 232408C62A84E41F000A1024 /* TranslationViewController.swift */; };
+		232408CB2A84ECAA000A1024 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 232408CA2A84ECAA000A1024 /* .gitignore */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +36,9 @@
 		232408912A823A8C000A1024 /* BeerCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerCollectionViewCell.swift; sourceTree = "<group>"; };
 		232408922A823A8C000A1024 /* BeerCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BeerCollectionViewCell.xib; sourceTree = "<group>"; };
 		232408A22A825527000A1024 /* RandomBeerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomBeerViewController.swift; sourceTree = "<group>"; };
+		232408C42A84E402000A1024 /* Translation.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Translation.storyboard; sourceTree = "<group>"; };
+		232408C62A84E41F000A1024 /* TranslationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslationViewController.swift; sourceTree = "<group>"; };
+		232408CA2A84ECAA000A1024 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,18 +74,37 @@
 		2324087C2A8230EA000A1024 /* APIProject */ = {
 			isa = PBXGroup;
 			children = (
+				232408C32A84E3CB000A1024 /* Translation */,
+				232408C22A84E3A9000A1024 /* Beer */,
+				232408CA2A84ECAA000A1024 /* .gitignore */,
 				2324087D2A8230EA000A1024 /* AppDelegate.swift */,
 				2324087F2A8230EA000A1024 /* SceneDelegate.swift */,
-				232408812A8230EA000A1024 /* BeerViewController.swift */,
-				232408912A823A8C000A1024 /* BeerCollectionViewCell.swift */,
-				232408922A823A8C000A1024 /* BeerCollectionViewCell.xib */,
-				232408832A8230EA000A1024 /* Main.storyboard */,
-				232408A22A825527000A1024 /* RandomBeerViewController.swift */,
 				232408862A8230EE000A1024 /* Assets.xcassets */,
 				232408882A8230EE000A1024 /* LaunchScreen.storyboard */,
 				2324088B2A8230EE000A1024 /* Info.plist */,
 			);
 			path = APIProject;
+			sourceTree = "<group>";
+		};
+		232408C22A84E3A9000A1024 /* Beer */ = {
+			isa = PBXGroup;
+			children = (
+				232408832A8230EA000A1024 /* Main.storyboard */,
+				232408812A8230EA000A1024 /* BeerViewController.swift */,
+				232408912A823A8C000A1024 /* BeerCollectionViewCell.swift */,
+				232408922A823A8C000A1024 /* BeerCollectionViewCell.xib */,
+				232408A22A825527000A1024 /* RandomBeerViewController.swift */,
+			);
+			path = Beer;
+			sourceTree = "<group>";
+		};
+		232408C32A84E3CB000A1024 /* Translation */ = {
+			isa = PBXGroup;
+			children = (
+				232408C42A84E402000A1024 /* Translation.storyboard */,
+				232408C62A84E41F000A1024 /* TranslationViewController.swift */,
+			);
+			path = Translation;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -152,7 +177,9 @@
 			files = (
 				232408942A823A8C000A1024 /* BeerCollectionViewCell.xib in Resources */,
 				2324088A2A8230EE000A1024 /* LaunchScreen.storyboard in Resources */,
+				232408C52A84E402000A1024 /* Translation.storyboard in Resources */,
 				232408872A8230EE000A1024 /* Assets.xcassets in Resources */,
+				232408CB2A84ECAA000A1024 /* .gitignore in Resources */,
 				232408852A8230EA000A1024 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -166,6 +193,7 @@
 			files = (
 				232408932A823A8C000A1024 /* BeerCollectionViewCell.swift in Sources */,
 				232408A32A825528000A1024 /* RandomBeerViewController.swift in Sources */,
+				232408C72A84E41F000A1024 /* TranslationViewController.swift in Sources */,
 				232408822A8230EA000A1024 /* BeerViewController.swift in Sources */,
 				2324087E2A8230EA000A1024 /* AppDelegate.swift in Sources */,
 				232408802A8230EA000A1024 /* SceneDelegate.swift in Sources */,

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Transition View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="TranslationViewController" id="Y6W-OH-hqX" customClass="TransitionViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="0WN-j0-KMv">
+                                <rect key="frame" x="20" y="79" width="353" height="317"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cm7-tM-qZr">
+                                <rect key="frame" x="20" y="416" width="353" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="N9j-Na-eJR"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <connections>
+                                    <action selector="requestButton:" destination="sOx-Ew-tac" eventType="touchUpInside" id="dHL-XN-c3u"/>
+                                    <action selector="requestButtonClicked:" destination="sOx-Ew-tac" eventType="touchUpInside" id="Cej-eV-Ktr"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="HXu-sw-PYd">
+                                <rect key="frame" x="20" y="481" width="353" height="317"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="HXu-sw-PYd" firstAttribute="top" secondItem="cm7-tM-qZr" secondAttribute="bottom" constant="20" id="1RC-RR-wZ2"/>
+                            <constraint firstItem="cm7-tM-qZr" firstAttribute="top" secondItem="0WN-j0-KMv" secondAttribute="bottom" constant="20" id="C1b-A7-5fi"/>
+                            <constraint firstItem="0WN-j0-KMv" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="20" id="ORS-jv-i5i"/>
+                            <constraint firstItem="HXu-sw-PYd" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="Pg0-Sa-RoD"/>
+                            <constraint firstItem="HXu-sw-PYd" firstAttribute="height" secondItem="0WN-j0-KMv" secondAttribute="height" id="QvA-4V-SEf"/>
+                            <constraint firstItem="cm7-tM-qZr" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="V2S-o4-2fb"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="0WN-j0-KMv" secondAttribute="trailing" constant="20" id="dMQ-9L-ASs"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="HXu-sw-PYd" secondAttribute="bottom" constant="20" id="ifY-5t-F0h"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="HXu-sw-PYd" secondAttribute="trailing" constant="20" id="jxJ-ID-Eed"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="cm7-tM-qZr" secondAttribute="trailing" constant="20" id="mgq-Z6-GcO"/>
+                            <constraint firstItem="0WN-j0-KMv" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="xKF-TD-0ff"/>
+                        </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="LYU-jy-DQx" appends="YES" id="ilE-g2-j3S"/>
+                        </connections>
+                    </view>
+                    <connections>
+                        <outlet property="textView" destination="0WN-j0-KMv" id="6Ne-EH-Xyf"/>
+                        <outlet property="translateTextView" destination="HXu-sw-PYd" id="vZ5-n1-oM2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="sOx-Ew-tac" userLabel="Exit" sceneMemberID="exit"/>
+                <tapGestureRecognizer id="LYU-jy-DQx">
+                    <connections>
+                        <action selector="tapGestureTapped:" destination="sOx-Ew-tac" id="JxS-1U-p0s"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="140" y="-2"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="labelColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
