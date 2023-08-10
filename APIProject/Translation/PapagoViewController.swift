@@ -20,11 +20,13 @@ class PapagoViewController: UIViewController {
         "X-Naver-Client-Secret": APIKey.naverKey
     ]
     var langCode: String = ""
+    let placeholder = "번역할 내용을 입력하세요."
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        textView.text = ""
+        textView.text = placeholder
+        textView.textColor = .lightGray
         textView.delegate = self
         translateTextView.text = ""
         translateTextView.isEditable = false
@@ -86,6 +88,8 @@ class PapagoViewController: UIViewController {
             }
         }
         
+        view.endEditing(true)
+        
     }
 
 }
@@ -96,4 +100,17 @@ extension PapagoViewController: UITextViewDelegate {
         callLangCode()
     }
     
+    func textViewDidBeginEditing(_ textView: UITextView) {
+        if textView.textColor == .lightGray {
+            textView.text = nil
+            textView.textColor = .black
+        }
+    }
+    
+    func textViewDidEndEditing(_ textView: UITextView) {
+        if textView.text.isEmpty {
+            textView.text = placeholder
+            textView.textColor = .lightGray
+        }
+    }
 }
