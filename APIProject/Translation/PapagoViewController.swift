@@ -25,6 +25,7 @@ class PapagoViewController: UIViewController {
         super.viewDidLoad()
         
         textView.text = ""
+        textView.delegate = self
         translateTextView.text = ""
         translateTextView.isEditable = false
 
@@ -57,8 +58,6 @@ class PapagoViewController: UIViewController {
     }
     
     @IBAction func requestButtonClicked(_ sender: UIButton) {
-        callLangCode()
-        
         //2. 입력한 텍뷰.텍스트가 한국어로 번역
         let url = "https://openapi.naver.com/v1/papago/n2mt"
         let parameters: Parameters = [
@@ -89,4 +88,12 @@ class PapagoViewController: UIViewController {
         
     }
 
+}
+
+extension PapagoViewController: UITextViewDelegate {
+    
+    func textViewDidChange(_ textView: UITextView) {
+        callLangCode()
+    }
+    
 }
