@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -9,10 +9,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Transition View Controller-->
+        <!--Papago View Controller-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController storyboardIdentifier="TranslationViewController" id="Y6W-OH-hqX" customClass="TransitionViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="TranslationViewController" id="Y6W-OH-hqX" customClass="PapagoViewController" customModule="APIProject" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -35,6 +35,7 @@
                                 <connections>
                                     <action selector="requestButton:" destination="sOx-Ew-tac" eventType="touchUpInside" id="dHL-XN-c3u"/>
                                     <action selector="requestButtonClicked:" destination="sOx-Ew-tac" eventType="touchUpInside" id="Cej-eV-Ktr"/>
+                                    <action selector="requestButtonClicked:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="RmE-ZK-eHz"/>
                                 </connections>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="HXu-sw-PYd">
@@ -67,8 +68,9 @@
                         </connections>
                     </view>
                     <connections>
-                        <outlet property="textView" destination="0WN-j0-KMv" id="6Ne-EH-Xyf"/>
-                        <outlet property="translateTextView" destination="HXu-sw-PYd" id="vZ5-n1-oM2"/>
+                        <outlet property="requestButton" destination="cm7-tM-qZr" id="HtV-lY-5Uf"/>
+                        <outlet property="textView" destination="0WN-j0-KMv" id="L2e-lq-Ax8"/>
+                        <outlet property="translateTextView" destination="HXu-sw-PYd" id="heS-Qz-xSA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
